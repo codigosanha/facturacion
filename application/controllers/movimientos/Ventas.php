@@ -417,7 +417,7 @@ class Ventas extends CI_Controller {
 
 	public function printVenta($idventa){
 		$this->load->library("EscPos.php");
-		$connector = new Escpos\PrintConnectors\WindowsPrintConnector("POS58C");
+		$connector = new Escpos\PrintConnectors\WindowsPrintConnector("POS-58C");
 		try {
 			$venta = $this->Ventas_model->getVenta($idventa);
 			$detalles = $this->Ventas_model->getDetalle($idventa);

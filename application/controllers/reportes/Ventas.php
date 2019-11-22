@@ -40,6 +40,14 @@ class Ventas extends CI_Controller {
 	}
 
 	public function printVenta($idventa){
+		$venta = json_encode($this->Ventas_model->getVenta($idventa));
+		$detalles = json_encode($this->Ventas_model->getDetalle($idventa));
+		redirect("http://localhost/test/imprimir/?venta=$venta&detalles=$detalles");
+
+		//header("location:http://localhost/test/print");
+	}
+
+	public function printVenta2($idventa){
 		$this->load->library("EscPos.php");
 		try {
 			$venta = $this->Ventas_model->getVenta($idventa);

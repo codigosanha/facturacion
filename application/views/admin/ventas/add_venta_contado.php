@@ -15,7 +15,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-8">
-                        <form action="<?php echo base_url();?>movimientos/ventas/store" method="POST" id="form-add-venta">
+                        <form action="<?php echo base_url() ?>/movimientos/ventas/store" method="POST" id="form-add-venta">
                             <input type="hidden" name="tipo_venta" value="1">
                             <div class="row">
                                 <div class="col-md-6">
